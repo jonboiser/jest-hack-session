@@ -10,7 +10,7 @@
 <script>
 
 function fakeHTTPRequest() {
-  return Promise.reject('need to mock me, dog');
+  return Promise.reject('need to mock me, dawg');
 }
 
 export default {
