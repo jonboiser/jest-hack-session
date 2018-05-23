@@ -1,27 +1,44 @@
-# jest-hack-session
+# Jest + Vue Hack Session
 
-> A Vue.js project
+## Getting started
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+```
+hub clone jonboiser/jest-hack-session
+yarn install
+yarn run test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Running in watch mode
+
+During exercises, run it in watch mode:
+
+```
+yarn run test:dev
+```
+
+## Features to try
+
+### Auto-detecting changed files
+
+In watch mode, only tests related to recently changed files (uncommitted changes in git) will be run. Modify some bit of test or application code and see which tests get run.
+
+### Snapshot tests
+
+One test `HelloWorldSnap.spec.js` is designed as a snapshot test. Modify `HelloWorldSnap.vue` in way that changes how it would appear in the DOM and fix the failing test by editing its snapshot.
+
+[Docs](https://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest)
+
+### Mocking functions
+
+The tests `Mocking.spec.js` are failing because the component `Mocking.vue` relies on an HTTP call made on its `beforeMount` lifecycle hook. We need to mock a method in `Mocking.vue` to get it to work.
+
+[vue-test-utils docs on mocking](https://vue-test-utils.vuejs.org/api/options.html#mocks)
+[using jest.fn() mockers](https://facebook.github.io/jest/docs/en/mock-function-api.html)
+
+### Async tests
+
+In `asyncStuff.js` there is a function `promiser` that returns a `Promise<string>`. Write a test for it. For fun, add a test that handles the error case as well.
+
+Put the test in the same directory as `asyncStuff.js`, but in a sub folder `__tests__` (Jest will look for tests in directories with this name).
+
+[jest docs](https://facebook.github.io/jest/docs/en/asynchronous.html#async-await)
