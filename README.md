@@ -16,7 +16,7 @@ During exercises, run it in watch mode:
 yarn run test:dev
 ```
 
-Sometimes you will need to press <key>w</key> to see some options.
+Sometimes you will need to press <kbd>w</kbd> to see some options.
 
 ## Features to try
 
@@ -30,7 +30,7 @@ Also check out the cool diffs and stack traces you get with errors.
 
 One test `HelloWorldSnap.spec.js` is designed as a snapshot test. Modify `HelloWorldSnap.vue` in way that changes how it would appear in the DOM and fix the failing test by editing its snapshot.
 
-You can fix the snapshot manually (recommended) or automatically in the CLI by pressing <key>u</key>.
+You can fix the snapshot manually (recommended) or automatically in the CLI by pressing <kbd>u</kbd>.
 
 [Docs](https://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest)
 
@@ -39,6 +39,7 @@ You can fix the snapshot manually (recommended) or automatically in the CLI by p
 The tests `Mocking.spec.js` are failing because the component `Mocking.vue` relies on an HTTP call made on its `beforeMount` lifecycle hook. We need to mock a method in `Mocking.vue` to get it to work.
 
 [vue-test-utils docs on mocking](https://vue-test-utils.vuejs.org/api/options.html#mocks)
+
 [using jest.fn() mockers](https://facebook.github.io/jest/docs/en/mock-function-api.html)
 
 ### Async tests
