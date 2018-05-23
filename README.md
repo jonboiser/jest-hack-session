@@ -24,6 +24,8 @@ Sometimes you will need to press <key>w</key> to see some options.
 
 In watch mode, only tests related to recently changed files (uncommitted changes in git) will be run. Modify some bit of test or application code and see which tests get run.
 
+Also check out the cool diffs and stack traces you get with errors.
+
 ### Snapshot tests
 
 One test `HelloWorldSnap.spec.js` is designed as a snapshot test. Modify `HelloWorldSnap.vue` in way that changes how it would appear in the DOM and fix the failing test by editing its snapshot.
