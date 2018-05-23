@@ -16,6 +16,8 @@ During exercises, run it in watch mode:
 yarn run test:dev
 ```
 
+Sometimes you will need to press <key>w</key> to see some options.
+
 ## Features to try
 
 ### Auto-detecting changed files
@@ -25,6 +27,8 @@ In watch mode, only tests related to recently changed files (uncommitted changes
 ### Snapshot tests
 
 One test `HelloWorldSnap.spec.js` is designed as a snapshot test. Modify `HelloWorldSnap.vue` in way that changes how it would appear in the DOM and fix the failing test by editing its snapshot.
+
+You can fix the snapshot manually (recommended) or automatically in the CLI by pressing <key>u</key>.
 
 [Docs](https://facebook.github.io/jest/docs/en/snapshot-testing.html#snapshot-testing-with-jest)
 

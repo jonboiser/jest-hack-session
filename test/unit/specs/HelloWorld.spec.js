@@ -1,11 +1,13 @@
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld';
+import HelloWorldSnap from '@/components/HelloWorldSnap';
+import { shallow } from '@vue/test-utils';
 
-describe('HelloWorld.vue', () => {
-  it('should render correct contents', () => {
-    const Constructor = Vue.extend(HelloWorld);
-    const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector('.hello h1').textContent)
-      .toEqual('Welcome to Your Vue.js App');
+describe('HelloWorldSnap.vue', () => {
+  it('should render correctly with props', () => {
+    const wrapper = shallow(HelloWorldSnap, {
+      propsData: {
+        name: 'Plato',
+      },
+    });
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
